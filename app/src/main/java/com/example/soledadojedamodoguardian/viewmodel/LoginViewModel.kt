@@ -103,7 +103,7 @@ class LoginViewModel(
                 confirmarError == null
     }
 
-    // Inicio de sesión utilizando Room
+    
     fun iniciarSesion(
         onResultado: (Boolean) -> Unit
     ) {
@@ -151,7 +151,7 @@ class LoginViewModel(
         }
     }
 
-    // Registro de usuarios utilizando Room
+
     fun registrar(
         onResultado: (Boolean) -> Unit
     ) {

@@ -14,23 +14,22 @@ import androidx.compose.ui.unit.dp
 import com.example.soledadojedamodoguardian.viewmodel.LoginViewModel
 import com.example.soledadojedamodoguardian.viewmodel.NavigationViewModel
 
-// Pantalla para registrar nuevos usuarios
+
 @Composable
 fun RegisterScreen(
     vm: LoginViewModel,
     nav: NavigationViewModel
 ) {
 
-    // Estado del formulario
+
     val state by vm.uiState.collectAsState()
     val errores by vm.errores.collectAsState()
 
-    // Mostrar u ocultar contraseña
     var visible by remember {
         mutableStateOf(false)
     }
 
-    // Mensaje de registro exitoso
+
     var mensaje by remember {
         mutableStateOf("")
     }
@@ -46,7 +45,7 @@ fun RegisterScreen(
             verticalArrangement = Arrangement.Center
         ) {
 
-            // Título
+
             Text(
                 text = "Crear cuenta",
                 style = MaterialTheme.typography.headlineMedium
@@ -54,7 +53,7 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            // Nombre de usuario
+
             OutlinedTextField(
                 value = state.nombre,
                 onValueChange = {
@@ -74,7 +73,7 @@ fun RegisterScreen(
                 modifier = Modifier.fillMaxWidth()
             )
 
-            // Correo electrónico
+
             OutlinedTextField(
                 value = state.email,
                 onValueChange = {
@@ -94,7 +93,7 @@ fun RegisterScreen(
                 modifier = Modifier.fillMaxWidth()
             )
 
-            // Contraseña
+
             OutlinedTextField(
                 value = state.password,
                 onValueChange = {
@@ -119,7 +118,7 @@ fun RegisterScreen(
                 modifier = Modifier.fillMaxWidth()
             )
 
-            // Confirmar contraseña
+
             OutlinedTextField(
                 value = state.confirmarPassword,
                 onValueChange = {
@@ -144,7 +143,7 @@ fun RegisterScreen(
                 modifier = Modifier.fillMaxWidth()
             )
 
-            // Mostrar u ocultar contraseñas
+
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -160,7 +159,7 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Mostrar errores del registro
+
             if (state.mensajeError.isNotEmpty()) {
                 Text(
                     text = state.mensajeError,
@@ -168,7 +167,7 @@ fun RegisterScreen(
                 )
             }
 
-            // Mostrar mensaje de éxito
+
             if (mensaje.isNotEmpty()) {
                 Text(
                     text = mensaje,
@@ -178,7 +177,7 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Botón para registrar en Room
+
             Button(
                 enabled = !state.isLoading,
                 onClick = {
@@ -212,7 +211,6 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // Regresar al inicio de sesión
             TextButton(
                 enabled = !state.isLoading,
                 onClick = {

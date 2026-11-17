@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 
 import com.example.soledadojedamodoguardian.R
 
-// Vista previa para celular
+
 @Preview(
     name = "Celular - Compact",
     showBackground = true,
@@ -25,7 +25,7 @@ fun LoginPreviewCompact() {
     LoginPreviewContenido()
 }
 
-// Vista previa para pantalla mediana
+
 @Preview(
     name = "Tablet - Medium",
     showBackground = true,
@@ -37,7 +37,7 @@ fun LoginPreviewMedium() {
     LoginPreviewContenido(pantallaGrande = true)
 }
 
-// Vista previa para pantalla grande
+
 @Preview(
     name = "Pantalla grande - Expanded",
     showBackground = true,
@@ -49,8 +49,8 @@ fun LoginPreviewExpanded() {
     LoginPreviewContenido(pantallaGrande = true)
 }
 
-// Representación visual del login para las previews.
-// No utiliza Room ni realiza autenticación.
+
+
 @Composable
 private fun LoginPreviewContenido(
     pantallaGrande: Boolean = false

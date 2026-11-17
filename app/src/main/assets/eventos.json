@@ -1,0 +1,65 @@
+[
+  {
+    "id": "demo-1",
+    "titulo": "Movimiento no autorizado",
+    "zona": "Perímetro Norte · Sector B",
+    "camara": "CAM-04",
+    "tipo": "Alerta",
+    "prioridad": "Crítica",
+    "minutos": 2
+  },
+  {
+    "id": "demo-2",
+    "titulo": "Acceso autorizado",
+    "zona": "Entrada Principal",
+    "camara": "CAM-01",
+    "tipo": "Acceso",
+    "prioridad": "Baja",
+    "minutos": 24
+  },
+  {
+    "id": "demo-3",
+    "titulo": "Cámara desconectada",
+    "zona": "Bodega A",
+    "camara": "CAM-07",
+    "tipo": "Alerta",
+    "prioridad": "Alta",
+    "minutos": 29
+  },
+  {
+    "id": "demo-4",
+    "titulo": "Puerta abierta fuera de horario",
+    "zona": "Almacén Central",
+    "camara": "CAM-05",
+    "tipo": "Alerta",
+    "prioridad": "Crítica",
+    "minutos": 46
+  },
+  {
+    "id": "demo-5",
+    "titulo": "Ronda completada",
+    "zona": "Perímetro Sur",
+    "camara": "CAM-03",
+    "tipo": "Evento",
+    "prioridad": "Baja",
+    "minutos": 72
+  },
+  {
+    "id": "demo-6",
+    "titulo": "Salida autorizada",
+    "zona": "Portón Vehicular",
+    "camara": "CAM-09",
+    "tipo": "Acceso",
+    "prioridad": "Baja",
+    "minutos": 99
+  },
+  {
+    "id": "demo-7",
+    "titulo": "Batería baja · Sensor",
+    "zona": "Perímetro Este",
+    "camara": "CAM-06",
+    "tipo": "Alerta",
+    "prioridad": "Media",
+    "minutos": 113
+  }
+]

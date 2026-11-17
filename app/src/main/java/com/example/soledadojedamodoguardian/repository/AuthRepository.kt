@@ -14,7 +14,7 @@ class AuthRepository(context: Context) {
     private val usuarioDao =
         DatabaseProvider.getDatabase(context).usuarioDao()
 
-    // Usuarios de prueba de la guía
+   
     private val cuentasPrueba = mapOf(
         "admin@guardian.test" to Cuenta(
             "Administrador", "123456", Rol.ADMIN
@@ -27,7 +27,7 @@ class AuthRepository(context: Context) {
         )
     )
 
-    // Iniciar sesión
+
     suspend fun login(
         email: String,
         password: String
@@ -35,7 +35,7 @@ class AuthRepository(context: Context) {
 
         val correo = email.trim().lowercase()
 
-        // Mantener usuarios de prueba
+
         val cuentaPrueba = cuentasPrueba[correo]
 
         if (cuentaPrueba != null) {
@@ -50,7 +50,7 @@ class AuthRepository(context: Context) {
             } else null
         }
 
-        // Buscar usuario en Room
+
         val usuario = usuarioDao.buscarPorEmail(correo)
             ?: return@withContext null
 
